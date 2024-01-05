@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccountService } from '../account/account.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  collapsed = true;
+
+  constructor(public accountService: AccountService) { }
+
+  logout() {
+    //this.accountService.logout();
+  }
+
+  toggleCollapsed() {
+    this.collapsed = !this.collapsed;
+  }
 }
