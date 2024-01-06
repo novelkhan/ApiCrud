@@ -7,6 +7,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   // Implementing lazy loading by following format
   {path:'account', loadChildren: () => import('./account/account.module').then(module => module.AccountModule)},
+  // Implementing lazy loading for man module by following format
+  {path:'man', loadChildren: () => import('./man/man.module').then(module => module.ManModule)},
   {path: 'not-found', component: NotFoundComponent},
   {path: '**', component: NotFoundComponent, pathMatch: 'full'}
 ];
