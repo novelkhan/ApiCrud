@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ManRoutingModule } from './man-routing.module';
-import { MenComponent } from './men/men.component';
-import { AddComponent } from './add/add.component';
+import { MenComponent } from './components/men/men.component';
+import { AddComponent } from './components/add/add.component';
 
 
 

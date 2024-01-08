@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AccountService } from '../account/account.service';
+import { AccountService } from 'src/app/modules/account/account.service';
 
 @Component({
   selector: 'app-navbar',

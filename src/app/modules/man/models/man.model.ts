@@ -1,9 +1,9 @@
 export interface Man {
-    Id: number,
-    Name: string,
-    Age: number,
-    City: string,
-    Country: string
+    id: number,
+    name: string,
+    age: number,
+    city: string,
+    country: string
 }
 
 /* public int Id { get; set; }
