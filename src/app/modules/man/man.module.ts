@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ManRoutingModule } from './man-routing.module';
 import { MenComponent } from './components/men/men.component';
 import { AddComponent } from './components/add/add.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +15,9 @@ import { AddComponent } from './components/add/add.component';
   ],
   imports: [
     CommonModule,
-    ManRoutingModule
+    ManRoutingModule,
+    RouterModule,
+    FormsModule
   ]
 })
 export class ManModule { }
