@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './components/edit/edit.component';
 import { DetailsComponent } from './components/details/details.component';
+import { DeleteComponent } from './components/delete/delete.component';
 
 
 
@@ -15,7 +16,8 @@ import { DetailsComponent } from './components/details/details.component';
     MenComponent,
     AddComponent,
     EditComponent,
-    DetailsComponent
+    DetailsComponent,
+    DeleteComponent
   ],
   imports: [
     CommonModule,

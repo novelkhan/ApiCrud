@@ -5,14 +5,15 @@ import { MenComponent } from './components/men/men.component';
 import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
 import { DetailsComponent } from './components/details/details.component';
+import { DeleteComponent } from './components/delete/delete.component';
 
 
 const routes: Routes = [
   {path:'', component: MenComponent},
   {path:'add', component: AddComponent},
   {path:'edit/:id', component: EditComponent},
-  {path:'details/:id', component: DetailsComponent}
-  // {path:'delete/:id', component: DeleteComponent}
+  {path:'details/:id', component: DetailsComponent},
+  {path:'delete/:id', component: DeleteComponent}
 ];
 
 
