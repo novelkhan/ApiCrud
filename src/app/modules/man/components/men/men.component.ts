@@ -19,4 +19,16 @@ export class MenComponent implements OnInit{
     this.men$ = this.manService.getAllmen();
   }
 
+
+  /* onDirectDelete(id: number): void {
+    if (id) {
+      this.manService.deleteMan(id)
+      .subscribe({
+        next: (response) => {
+          this.router.navigateByUrl('/man');
+        }
+      });
+    }
+  } */
+
 }

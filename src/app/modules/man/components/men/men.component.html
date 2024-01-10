@@ -29,7 +29,8 @@
             <td>
               <a class="btn btn-sm btn-outline-primary rounded-pill" [routerLink]="['/man/details', man.id]">Details</a>|
               <a class="btn btn-sm btn-outline-primary rounded-pill" [routerLink]="['/man/edit', man.id]">Edit</a>|
-              <a class="btn btn-sm btn-outline-danger rounded-pill" [routerLink]="['/man/delete', man.id]">Delete</a>
+              <a class="btn btn-sm btn-outline-danger rounded-pill" [routerLink]="['/man/delete', man.id]">Delete</a><!-- |
+              <a class="btn btn-sm btn-danger rounded-pill" (click)="onDirectDelete(man.id)">Direct Delete</a> -->
             </td>
           </tr>
         </tbody>

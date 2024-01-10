@@ -5,13 +5,17 @@ import { MenComponent } from './components/men/men.component';
 import { AddComponent } from './components/add/add.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './components/edit/edit.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 
 @NgModule({
   declarations: [
     MenComponent,
-    AddComponent
+    AddComponent,
+    EditComponent,
+    DetailsComponent
   ],
   imports: [
     CommonModule,

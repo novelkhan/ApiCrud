@@ -19,4 +19,16 @@ export class ManService {
   addMan(model: AddMan): Observable<void> {
     return this.http.post<void>(`${environment.manApiBaseUrl}/man`, model);
   }
+
+  getManById(id: number): Observable<Man> {
+    return this.http.get<Man>(`${environment.manApiBaseUrl}/man/`+ id);
+  }
+
+  updateMan(id: number, model: Man) : Observable<Man> {
+    return this.http.put<Man>(`${environment.manApiBaseUrl}/man/`+ id, model);
+  }
+
+  deleteMan(id: number) : Observable<Man> {
+    return this.http.delete<Man>(`${environment.manApiBaseUrl}/man/`+ id);
+  }
 }
