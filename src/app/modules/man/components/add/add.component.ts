@@ -13,6 +13,8 @@ export class AddComponent implements OnDestroy{
 
   model: AddMan;
   private addManSubscribtion?: Subscription;
+  
+  errorMessages: string[] = [];
 
   constructor(private manService: ManService,
     private router: Router) {
@@ -26,10 +28,18 @@ export class AddComponent implements OnDestroy{
 
 
   onFormSubmit() {
+    this.errorMessages = [];
     this.addManSubscribtion = this.manService.addMan(this.model)
     .subscribe({
       next: (response) => {
         this.router.navigateByUrl('/man');
+      },
+      error: error => {
+        if (error.error.errors) {
+          this.errorMessages = error.error.errors;
+        } else {
+          this.errorMessages.push(error.error);
+        }
       }
     })
   }

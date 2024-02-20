@@ -8,22 +8,24 @@ import { FormsModule } from '@angular/forms';
 import { EditComponent } from './components/edit/edit.component';
 import { DetailsComponent } from './components/details/details.component';
 import { DeleteComponent } from './components/delete/delete.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
 @NgModule({
-  declarations: [
-    MenComponent,
-    AddComponent,
-    EditComponent,
-    DetailsComponent,
-    DeleteComponent
-  ],
-  imports: [
-    CommonModule,
-    ManRoutingModule,
-    RouterModule,
-    FormsModule
-  ]
+    declarations: [
+        MenComponent,
+        AddComponent,
+        EditComponent,
+        DetailsComponent,
+        DeleteComponent
+    ],
+    imports: [
+        CommonModule,
+        ManRoutingModule,
+        RouterModule,
+        FormsModule,
+        SharedModule
+    ]
 })
 export class ManModule { }

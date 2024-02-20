@@ -12,6 +12,9 @@ import { ValidationMessagesComponent } from './components/errors/validation-mess
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ValidationMessagesComponent
   ]
 })
 export class SharedModule { }
