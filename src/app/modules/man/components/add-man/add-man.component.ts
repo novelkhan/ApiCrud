@@ -52,6 +52,7 @@ export class AddManComponent implements OnDestroy {
 
 
 
+    // this.addManSubscribtion = this.manService.addMan(formData)
     this.addManSubscribtion = this.manService.addMan(man)
     .subscribe({
       next: (response) => {
