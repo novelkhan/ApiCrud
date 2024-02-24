@@ -16,7 +16,11 @@ export class ManService {
     return this.http.get<Man[]>(`${environment.manApiBaseUrl}/man`);
   }
 
-  addMan(model: AddMan): Observable<void> {
+  // addMan(model: AddMan): Observable<void> {
+  //   return this.http.post<void>(`${environment.manApiBaseUrl}/man`, model);
+  // }
+
+  addMan(model: any): Observable<void> {
     return this.http.post<void>(`${environment.manApiBaseUrl}/man`, model);
   }
 
