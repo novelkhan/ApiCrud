@@ -10,6 +10,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { SharedModule } from '../shared/shared.module';
 import { AddManComponent } from './components/add-man/add-man.component';
+import { BsModalService } from 'ngx-bootstrap/modal/bs-modal.service';
 
 
 
@@ -29,6 +30,6 @@ import { AddManComponent } from './components/add-man/add-man.component';
         FormsModule,
         SharedModule,
         ReactiveFormsModule
-    ]
+    ],
 })
 export class ManModule { }

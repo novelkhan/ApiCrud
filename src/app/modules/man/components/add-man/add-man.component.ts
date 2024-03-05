@@ -4,6 +4,7 @@ import { ManService } from '../../man.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AddMan } from '../../models/add-man.model';
+import { SharedService } from 'src/app/modules/shared/services/shared.service';
 
 @Component({
   selector: 'app-add-man',
@@ -23,7 +24,7 @@ export class AddManComponent implements OnDestroy {
   private addManSubscribtion?: Subscription;
   errorMessages: string[] = [];
 
-  constructor(private manService: ManService, private router: Router){}
+  constructor(private manService: ManService, private router: Router,private sharedService: SharedService){}
 
 
 
@@ -55,7 +56,8 @@ export class AddManComponent implements OnDestroy {
     // this.addManSubscribtion = this.manService.addMan(formData)
     this.addManSubscribtion = this.manService.addMan(man)
     .subscribe({
-      next: (response) => {
+      next: (response: any) => {
+        this.sharedService.showNotification(true, response.value.title, response.value.message);
         this.router.navigateByUrl('/man');
       },
       error: error => {
