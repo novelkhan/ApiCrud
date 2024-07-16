@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Man } from '../../models/man.model';
 import { Observable } from 'rxjs';
 import { ManService } from '../../man.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-men',
@@ -16,19 +17,20 @@ export class MenComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.loadMen();
+  }
+
+  loadMen(): void {
     this.men$ = this.manService.getAllmen();
   }
 
-
-  /* onDirectDelete(id: number): void {
+  onDirectDelete(id: number): void {        /* Solution here- https://chatgpt.com/c/13656be9-63cb-43d5-9dea-ce00599fd116 */
     if (id) {
       this.manService.deleteMan(id)
-      .subscribe({
-        next: (response) => {
-          this.router.navigateByUrl('/man');
-        }
-      });
+      .pipe(
+        tap(() => this.loadMen())
+      )
+      .subscribe();
     }
-  } */
-
+  } 
 }
