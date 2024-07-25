@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './modules/shared/components/errors/not-found/not-found.component';
 
+
+//Redirect problem solution is in this link- https://www.youtube.com/watch?v=ZUEfQgPwDXI 
+
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   // Implementing lazy loading by following format
